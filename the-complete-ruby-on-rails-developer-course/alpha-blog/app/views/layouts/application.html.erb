@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <title>AlphaBlog</title>
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <%= csrf_meta_tags %>
+    <%= csp_meta_tag %>
+    <%= stylesheet_link_tag "application", "data-turbo-track": "reload" %>
+    <%= javascript_importmap_tags %>
+  </head>
+  <body>
+    <%# This will render the message from 'layouts/_messages.html.erb'(it's called partial template). %>
+    <%# Check more about the partial template: https://guides.rubyonrails.org/layouts_and_rendering.html#using-partials %>
+    <%= render 'layouts/messages' %>
+    <%= yield %>
+  </body>
+</html>
