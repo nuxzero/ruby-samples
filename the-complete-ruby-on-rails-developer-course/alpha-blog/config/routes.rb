@@ -8,7 +8,10 @@ Rails.application.routes.draw do
   # Defines the root path route ("/")
   # root "posts#index"
   # resources :articles, only: [:show, :index, :new, :create, :edit, :update, :destroy]
-  root "pages#home"
-  get "about", to: "pages#about"
+  root 'pages#home'
+  get 'about', to: 'pages#about'
   resources :articles
+
+  get 'signup', to: 'users#new'
+  resources :users, except: [:new]
 end
