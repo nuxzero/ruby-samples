@@ -1,0 +1,7 @@
+<h1 class="text-center mt-4"><%= @user.username %>'s profile</h1>
+<%# gravartar_for method has been definded in the app/helpers/users_helper.rb. %>
+<%= gravatar_for @user, size: 200 %>
+<h3 class="text-center mt-4">Articles</h3>
+<%# Since _article.html.erb partial is located in different path. %>
+<%# So you have to specify the path name in the prefix to refer to app/view/articles/_article.htnl.erb. %>
+<%= render 'articles/article' %>
