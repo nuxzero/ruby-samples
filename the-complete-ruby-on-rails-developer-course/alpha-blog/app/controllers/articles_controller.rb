@@ -3,7 +3,10 @@ class ArticlesController < ApplicationController
   before_action :set_article, only: %i[show edit update destroy]
 
   def index
-    @articles = Article.all
+    # @articles = Article.all
+
+    # use an explicit "per page" limit:
+    @articles = Article.paginate(page: params[:page], per_page: 5)
   end
 
   def show

@@ -1,5 +1,14 @@
 <h1 class="text-center mt-4">Listing all articles</h1>
+<%# Top pagination %>
+<div class="flickr_pagination">
+  <%= will_paginate @articles, :container => false %>
+</div>
+<%# Render article list partial %>
 <%= render 'article' %>
+<%# Bottom pagination %>
+<div class="flickr_pagination mb-4">
+  <%= will_paginate @articles, :container => false %>
+</div>
 <%# Without stye %>
 <!--
 <table>
